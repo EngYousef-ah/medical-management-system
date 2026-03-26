@@ -6,17 +6,17 @@ export default function FeaturesHome() {
         {
             title: "Patient Records",
             desc: "Secure digital storage of medical history and data.",
-            img: {image2}
+            img: image2
         },
         {
             title: "Smart Scheduling",
             desc: "Automated appointment management system.",
-            img: {image3}
+            img: image3
         },
         {
             title: "Analytics Dashboard",
             desc: "Real-time insights and medical statistics.",
-            img:{image4}
+            img:image4
         }
     ];
     return (
