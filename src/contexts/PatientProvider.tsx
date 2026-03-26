@@ -7,9 +7,9 @@ type Props = {
     children: React.ReactNode;
 };
 
-const API_URL = "http://localhost:3000/patients";
+const API_URL = "https://my-json-server.typicode.com/EngYousef-ah/medical-management-system";
 export function PatientProvider({ children }: Props) {
-    const { data, loading } = useFetch(API_URL);
+    const { data, loading } = useFetch(`${API_URL}/patients`);
     const [patients, setPatients] = useState<TypePatient[]>([]);
 
 
@@ -21,7 +21,7 @@ export function PatientProvider({ children }: Props) {
 
     const refreshPatients = async () => {
         try {
-            const response = await axios.get(API_URL);
+            const response = await axios.get(`${API_URL}/patients`);
             setPatients(response.data)
         } catch (error) {
             console.log("Error fetching Patients" + error);

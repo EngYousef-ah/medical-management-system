@@ -35,7 +35,7 @@ const defaultPatient = {
     address: "",
     status: ""
 };
-
+const API_URL = "https://my-json-server.typicode.com/EngYousef-ah/medical-management-system";
 export function DialogPatient({ type, open, setOpen, patientId }: Props) {
     const { patients, refreshPatients } = useContext(PatientContext)!;
     const { users } = useContext(UserContext)!;
@@ -85,12 +85,12 @@ export function DialogPatient({ type, open, setOpen, patientId }: Props) {
         e.preventDefault()
         try {
             if (type == "edit") {
-                await axios.put(`http://localhost:3000/patients/${patientId}`, form)
+                await axios.put(`${API_URL}/patients/${patientId}`, form)
                 refreshPatients();
                 toast.success("The patient was successfully updated.");
 
             } else {
-                await axios.post("http://localhost:3000/patients", form)
+                await axios.post(`${API_URL}/patients`, form)
                 refreshPatients();
                 toast.success("The patient has been successfully added.");
             }

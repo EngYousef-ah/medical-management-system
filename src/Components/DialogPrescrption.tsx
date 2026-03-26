@@ -29,6 +29,8 @@ const defaultForm = {
     endDate: "",
     status: "active"
 };
+
+const API_URL = "https://my-json-server.typicode.com/EngYousef-ah/medical-management-system";
 export function DialogPrescrption({ type, open, setOpen, prescriptionId }: Props) {
 
     const [loadingSubmit, setLoadingSubmit] = useState(false);
@@ -90,10 +92,10 @@ export function DialogPrescrption({ type, open, setOpen, prescriptionId }: Props
         e.preventDefault();
         try {
             if (type === "edit") {
-                await axios.put(`http://localhost:3000/prescription/${prescriptionId}`, form);
+                await axios.put(`${API_URL}/prescription/${prescriptionId}`, form);
                 toast.success("The prescription has been successfully updated.");
             } else {
-                await axios.post(`http://localhost:3000/prescription`, form);
+                await axios.post(`${API_URL}/prescription`, form);
                 toast.success("The prescription has been added successfully.");
 
             }

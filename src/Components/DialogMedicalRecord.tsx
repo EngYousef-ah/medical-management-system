@@ -35,7 +35,7 @@ type typeFreePatient = {
   id: string
   name: string
 }
-
+const API_URL = "https://my-json-server.typicode.com/EngYousef-ah/medical-management-system";
 export function DialogMedicalRecord({ open, setOpen, type, MedicalRecordId }: Props) {
   const user = (() => {
     try {
@@ -136,11 +136,11 @@ export function DialogMedicalRecord({ open, setOpen, type, MedicalRecordId }: Pr
 
     try {
       if (type === "add") {
-        await axios.post("http://localhost:3000/medicalRecords", form)
+        await axios.post(`${API_URL}/medicalRecords`, form)
         toast.success("The medical record has been successfully added.");
       }
       else {
-        await axios.put(`http://localhost:3000/medicalRecords/${MedicalRecordId}`, form);
+        await axios.put(`${API_URL}/medicalRecords/${MedicalRecordId}`, form);
         toast.success("The medical record has been successfully updated.");
       }
       setOpen(false)

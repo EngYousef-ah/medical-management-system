@@ -4,10 +4,10 @@ import useFetch from "@/hooks/useFetch";
 type Props = {
   children: React.ReactNode;
 };
-
+const API_URL = "https://my-json-server.typicode.com/EngYousef-ah/medical-management-system";
 export function UserProvider({ children }: Props) {
 
-  const { data, loading } = useFetch("http://localhost:3000/users");
+  const { data, loading } = useFetch(`${API_URL}/users`);
 
   return (
     <UserContext.Provider value={{

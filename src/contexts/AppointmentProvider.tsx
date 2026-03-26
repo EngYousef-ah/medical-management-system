@@ -3,13 +3,12 @@ import axios from "axios";
 import { AppointmentContext } from "./AppointmentContext";
 import type { TypeAppointment } from "@/types/TypeAppointment";
 import useFetch from "@/hooks/useFetch";
-const API_URL = "http://localhost:3000/appointment";
 type Props = {
   children: React.ReactNode;
 };
-
+const API_URL = "https://my-json-server.typicode.com/EngYousef-ah/medical-management-system";
 export function AppointmentProvider({ children }: Props) {
-  const { data, loading, error } = useFetch(API_URL);
+  const { data, loading, error } = useFetch(`${API_URL}/appointment`);
 
   const [appointments, setAppointments] = useState<TypeAppointment[]>([]);
 
@@ -20,7 +19,7 @@ export function AppointmentProvider({ children }: Props) {
 
   const refreshAppointments = async () => {
     try {
-      const response = await axios.get(API_URL);
+      const response = await axios.get(`${API_URL}/appointment`);
       setAppointments(response.data);
     } catch (err) {
       console.log("Error fetching Appointments" + err);

@@ -4,12 +4,12 @@ import axios from "axios";
 import { MedicalRecordContext } from "./MedicalRecordContext";
 import type { TypeMedicalRecord } from "@/types/TypeMedicalRecord";
 import useFetch from "@/hooks/useFetch";
-const API_URL = "http://localhost:3000/medicalRecords";
+const API_URL = "https://my-json-server.typicode.com/EngYousef-ah/medical-management-system";
 type Props = {
     children: ReactNode;
 }
 export function MedicalRecordProvider({ children }: Props) {
-    const { data, loading } = useFetch(API_URL);
+    const { data, loading } = useFetch(`${API_URL}/medicalRecords`);
     const [records, setRecords] = useState<TypeMedicalRecord[]>([]);
 
     useEffect(() => {
@@ -20,7 +20,7 @@ export function MedicalRecordProvider({ children }: Props) {
 
     const refreshRecords = async () => {
         try {
-            const response = await axios.get(API_URL);
+            const response = await axios.get(`${API_URL}/medicalRecords`);
             setRecords(response.data);
         }
         catch (error) {

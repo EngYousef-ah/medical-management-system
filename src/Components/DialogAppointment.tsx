@@ -26,7 +26,7 @@ type Props = {
 }
 
 const types = ["checkup", "follow-up", "consultation", "procedure", "Emergency"]
-
+const API_URL = "https://my-json-server.typicode.com/EngYousef-ah/medical-management-system";
 export function DialogAppointment({ type, open, setOpen, appointmentId }: Props) {
     const { patients } = useContext(PatientContext)!;
     const { appointments } = useContext(AppointmentContext)!;
@@ -97,10 +97,10 @@ export function DialogAppointment({ type, open, setOpen, appointmentId }: Props)
             const data = { ...form, doctorId: user.id }
 
             if (!appointmentId) {
-                await axios.post("http://localhost:3000/appointment", data)
+                await axios.post(`${API_URL}/appointment`, data)
                 toast.success("The appointment has been added successfully.");
             } else {
-                await axios.put(`http://localhost:3000/appointment/${appointmentId}`, data)
+                await axios.put(`${API_URL}/appointment/${appointmentId}`, data)
                 toast.success("The appointment has been successfully updated.");
             }
             setOpen(false)
