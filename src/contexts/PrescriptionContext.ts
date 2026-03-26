@@ -5,7 +5,6 @@ export type PrescriptionContextType = {
     setPrescriptions: React.Dispatch<React.SetStateAction<TypePrescription[]>>;
     refreshPrescriptions: () => Promise<void>;
     loading: boolean;
-    error: string | null;
 }
 
 export const PrescriptionContext = createContext<PrescriptionContextType | null>(null);

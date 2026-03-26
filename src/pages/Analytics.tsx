@@ -1,14 +1,14 @@
-import SidebarFooter from "../Components/SidebarFooter";
-import SidebarHeader from "../Components/SidebarHeader";
-import SidebarItem from "../Components/SidebarItem";
-import Header from "../Components/Header";
-import Heading from "../Components/Heading";
-import Paragraph from "../Components/Paragraph";
-import ChartLine from "../Components/ChartLine";
-import ChartDonut from "../Components/ChartDonut";
+import SidebarFooter from "../components/SidebarFooter";
+import SidebarHeader from "../components/SidebarHeader";
+import SidebarItem from "../components/SidebarItem";
+import Header from "../components/Header";
+import Heading from "../components/Heading";
+import Paragraph from "../components/Paragraph";
+import ChartLine from "../components/ChartLine";
+import ChartDonut from "../components/ChartDonut";
 import { Link } from "react-router-dom";
 import { LayoutDashboard, User, CalendarDays, Paperclip, Pill, ChartColumn, LogOut } from "lucide-react"
-import ChartTinyBar from "../Components/ChartTinyBar";
+import ChartTinyBar from "../components/ChartTinyBar";
 
 import { useState } from "react";
 export function Analytics() {

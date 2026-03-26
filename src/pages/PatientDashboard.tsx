@@ -1,12 +1,12 @@
-import SidebarFooter from "../Components/SidebarFooter";
-import SidebarHeader from "../Components/SidebarHeader";
-import SidebarItem from "../Components/SidebarItem";
-import Header from "../Components/Header";
-import Heading from "../Components/Heading";
-import Paragraph from "../Components/Paragraph";
-import Card from "../Components/Card";
-import HeadinInfoCard from "../Components/HeadingInfoCard";
-import InfoCard from "../Components/InfoCard";
+import SidebarFooter from "../components/SidebarFooter";
+import SidebarHeader from "../components/SidebarHeader";
+import SidebarItem from "../components/SidebarItem";
+import Header from "../components/Header";
+import Heading from "../components/Heading";
+import Paragraph from "../components/Paragraph";
+import Card from "../components/Card";
+import HeadinInfoCard from "../components/HeadingInfoCard";
+import InfoCard from "../components/InfoCard";
 
 
 import { useState, useMemo, useContext } from "react";
@@ -19,7 +19,7 @@ import type { TypePatient } from "@/types/TypePatient";
 import type { TypeAppointment } from "@/types/TypeAppointment";
 import type { TypePrescription } from "@/types/TypePrescription";
 import type { TypeMedicalRecord } from "@/types/TypeMedicalRecord";
-import { CancelledAppointmentItem, CompletedAppointmentItem, ScheduledAppointmentItem } from "@/Components/AppointmentItem";
+import { CancelledAppointmentItem, CompletedAppointmentItem, ScheduledAppointmentItem } from "@/components/AppointmentItem";
 
 
 
@@ -73,7 +73,7 @@ export function PatinetDashboard() {
         return records.filter((r: TypeMedicalRecord) => {
             return patient?.id === r.patientId
         })
-    }, [records,patients, user])
+    }, [records, patients, user])
 
 
     const totalPrescription = useMemo(() => {

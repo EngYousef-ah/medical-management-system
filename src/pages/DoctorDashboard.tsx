@@ -1,27 +1,27 @@
-import SidebarFooter from "../Components/SidebarFooter";
-import SidebarHeader from "../Components/SidebarHeader";
-import SidebarItem from "../Components/SidebarItem";
-import Header from "../Components/Header";
-import Heading from "../Components/Heading";
-import Paragraph from "../Components/Paragraph";
-import Card from "../Components/Card";
-import HeadinInfoCard from "../Components/HeadingInfoCard";
-import InfoCard from "../Components/InfoCard";
-import ChartLine from "../Components/ChartLine";
-import ChartDonut from "../Components/ChartDonut";
+import SidebarFooter from "../components/SidebarFooter";
+import SidebarHeader from "../components/SidebarHeader";
+import SidebarItem from "../components/SidebarItem";
+import Header from "../components/Header";
+import Heading from "../components/Heading";
+import Paragraph from "../components/Paragraph";
+import Card from "../components/Card";
+import HeadinInfoCard from "../components/HeadingInfoCard";
+import InfoCard from "../components/InfoCard";
+import ChartLine from "../components/ChartLine";
+import ChartDonut from "../components/ChartDonut";
 
 import { useState, useMemo, useContext } from "react";
 
 import { LayoutDashboard, User, CalendarDays, Paperclip, Pill, ChartColumn, Clock, LogOut } from "lucide-react"
 import { Link } from "react-router-dom";
-import ChartTinyBar from "../Components/ChartTinyBar";
+import ChartTinyBar from "../components/ChartTinyBar";
 
 import type { TypeUser } from "@/types/TypeUser";
 import type { TypePatient } from "@/types/TypePatient";
 import type { TypeAppointment } from "@/types/TypeAppointment";
 import type { TypePrescription } from "@/types/TypePrescription";
 import type { TypeMedicalRecord } from "@/types/TypeMedicalRecord";
-import { CancelledAppointmentItem, CompletedAppointmentItem, ScheduledAppointmentItem } from "@/Components/AppointmentItem";
+import { CancelledAppointmentItem, CompletedAppointmentItem, ScheduledAppointmentItem } from "@/components/AppointmentItem";
 
 import { UserContext } from "../contexts/UserContext";
 import { AppointmentContext } from "../contexts/AppointmentContext";
@@ -29,7 +29,7 @@ import { PatientContext } from "@/contexts/PatientContext";
 import { PrescriptionContext } from "@/contexts/PrescriptionContext";
 import { MedicalRecordContext } from "@/contexts/MedicalRecordContext";
 // import toast from "react-hot-toast";
-import Loading from "@/Components/Loading";
+import Loading from "@/components/Loading";
 
 export function DoctorDashboard() {
     const [openMenu, setOpenMenu] = useState<boolean>(false);

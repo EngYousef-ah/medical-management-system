@@ -1,25 +1,25 @@
 import { CalendarDays, ChartColumn, FunnelPlus, LayoutDashboard, LogOut, Paperclip, Pill, Search, User } from "lucide-react";
-import AddBtn from "../Components/AddBtn";
-import Header from "../Components/Header";
-import Heading from "../Components/Heading";
-import Paragraph from "../Components/Paragraph";
-import SidebarFooter from "../Components/SidebarFooter";
-import SidebarItem from "../Components/SidebarItem";
-import SidebarHeader from "../Components/SidebarHeader";
+import AddBtn from "../components/AddBtn";
+import Header from "../components/Header";
+import Heading from "../components/Heading";
+import Paragraph from "../components/Paragraph";
+import SidebarFooter from "../components/SidebarFooter";
+import SidebarItem from "../components/SidebarItem";
+import SidebarHeader from "../components/SidebarHeader";
 import { Link } from "react-router-dom";
 import { useState, useMemo, useContext, useEffect, useReducer } from "react";
 
 import { useNavigate } from "react-router-dom";
-import SearchInput from "../Components/SearchInput";
-import { DialogPatient } from "@/Components/DialogPatient";
-import PaginationPage from "@/Components/PaginationPage";
+import SearchInput from "../components/SearchInput";
+import { DialogPatient } from "@/components/DialogPatient";
+import PaginationPage from "@/components/PaginationPage";
 
 import { UserContext } from "../contexts/UserContext";
 import { PatientContext } from "@/contexts/PatientContext";
 
 import type { TypeUser } from "@/types/TypeUser";
 import type { TypePatient } from "@/types/TypePatient";
-import Loading from "@/Components/Loading";
+import Loading from "@/components/Loading";
 
 
 type typeState = {

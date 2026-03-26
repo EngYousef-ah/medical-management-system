@@ -1,14 +1,14 @@
-import Header from "@/Components/Header";
-import Heading from "@/Components/Heading";
-import SidebarFooter from "@/Components/SidebarFooter";
-import SidebarHeader from "@/Components/SidebarHeader";
-import SidebarItem from "@/Components/SidebarItem";
+import Header from "@/components/Header";
+import Heading from "@/components/Heading";
+import SidebarFooter from "@/components/SidebarFooter";
+import SidebarHeader from "@/components/SidebarHeader";
+import SidebarItem from "@/components/SidebarItem";
 import { CalendarDays, ChartColumn, CircleUser, LayoutDashboard, LogOut, Paperclip, Phone, Pill, Syringe, User } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import { useContext, useMemo, useReducer } from "react";
 import { useParams } from "react-router-dom";
-import { AppointmentItem, CancelledAppointmentItem, CompletedAppointmentItem, ScheduledAppointmentItem } from "@/Components/AppointmentItem";
+import { AppointmentItem, CancelledAppointmentItem, CompletedAppointmentItem, ScheduledAppointmentItem } from "@/components/AppointmentItem";
 
 // IMPORTING CONTEXT
 import { UserContext } from "@/contexts/UserContext";
@@ -22,7 +22,7 @@ import type { TypeAppointment } from "@/types/TypeAppointment";
 import type { TypePatient } from "@/types/TypePatient";
 import type { TypeMedicalRecord } from "@/types/TypeMedicalRecord";
 import type { TypePrescription } from "@/types/TypePrescription";
-import Loading from "@/Components/Loading";
+import Loading from "@/components/Loading";
 
 type TypeTab = { type: "ActiveTab", payload: string; } | { type: "Menu" };
 
@@ -51,7 +51,7 @@ export default function MedicalRecordDetails() {
     const { users } = useContext(UserContext)!;
     const { patients } = useContext(PatientContext)!;
     const { appointments } = useContext(AppointmentContext)!;
-    const { records,loading } = useContext(MedicalRecordContext)!;
+    const { records, loading } = useContext(MedicalRecordContext)!;
     const { prescriptions } = useContext(PrescriptionContext)!;
 
 

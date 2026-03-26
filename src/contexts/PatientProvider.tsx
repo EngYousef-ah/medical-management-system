@@ -9,7 +9,7 @@ type Props = {
 
 const API_URL = "http://localhost:3000/patients";
 export function PatientProvider({ children }: Props) {
-    const { data, loading, error } = useFetch(API_URL);
+    const { data, loading } = useFetch(API_URL);
     const [patients, setPatients] = useState<TypePatient[]>([]);
 
 

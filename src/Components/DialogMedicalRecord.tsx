@@ -1,8 +1,8 @@
-import { Button } from "@/Components/ui/button"
-import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle, } from "@/Components/ui/dialog"
-import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue, } from "@/Components/ui/select"
-import { Field, FieldGroup } from "@/Components/ui/field"
-import { Input } from "@/Components/ui/input"
+import { Button } from "@/components/ui/button"
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle, } from "@/components/ui/dialog"
+import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue, } from "@/components/ui/select"
+import { Field, FieldGroup } from "@/components/ui/field"
+import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
 import { useState, useEffect, useContext } from "react"
@@ -170,7 +170,7 @@ export function DialogMedicalRecord({ open, setOpen, type, MedicalRecordId }: Pr
   return (
 
     <Dialog open={open} onOpenChange={setOpen}>
-     
+
       <DialogContent className="sm:max-w-lg bg-white/90 rounded-2xl p-6">
 
         <form onSubmit={handleSubmit}>

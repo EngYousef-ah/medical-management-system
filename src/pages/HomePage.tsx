@@ -1,8 +1,8 @@
-import NavbarHome from "../Components/NavbarHome";
-import HeroHome from "../Components/HeroHome";
-import StatsHome from "../Components/StatsHome";
-import FeaturesHome from "../Components/FeaturesHome";
-import FooterHome from "../Components/FooterHome";
+import NavbarHome from "../components/NavbarHome";
+import HeroHome from "../components/HeroHome";
+import StatsHome from "../components/StatsHome";
+import FeaturesHome from "../components/FeaturesHome";
+import FooterHome from "../components/FooterHome";
 
 export default function HomePage() {
     return (

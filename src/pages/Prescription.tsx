@@ -1,20 +1,20 @@
-import SidebarFooter from "../Components/SidebarFooter";
-import SidebarHeader from "../Components/SidebarHeader";
-import SidebarItem from "../Components/SidebarItem";
-import Header from "../Components/Header";
-import Heading from "../Components/Heading";
-import Paragraph from "../Components/Paragraph";
+import SidebarFooter from "../components/SidebarFooter";
+import SidebarHeader from "../components/SidebarHeader";
+import SidebarItem from "../components/SidebarItem";
+import Header from "../components/Header";
+import Heading from "../components/Heading";
+import Paragraph from "../components/Paragraph";
 import axios from 'axios';
 
 import { Link } from "react-router-dom";
 import { useState, useContext, useMemo, useEffect, useReducer } from "react";
 
 import { LayoutDashboard, User, CalendarDays, Paperclip, Pill, ChartColumn, LogOut, Search, Pencil, Trash2Icon } from "lucide-react"
-import SearchInput from "../Components/SearchInput";
-import { Alert } from "@/Components/Alert";
-import AddBtn from "@/Components/AddBtn";
-import { DialogPrescrption } from "@/Components/DialogPrescrption";
-import PaginationPage from "@/Components/PaginationPage";
+import SearchInput from "../components/SearchInput";
+import { Alert } from "@/components/Alert";
+import AddBtn from "@/components/AddBtn";
+import { DialogPrescrption } from "@/components/DialogPrescrption";
+import PaginationPage from "@/components/PaginationPage";
 
 import type { TypePrescription } from "@/types/TypePrescription";
 
@@ -23,8 +23,8 @@ import { UserContext } from "../contexts/UserContext";
 import { PatientContext } from "@/contexts/PatientContext";
 import { PrescriptionContext } from "@/contexts/PrescriptionContext";
 import toast from "react-hot-toast";
-import EmptyState from "@/Components/EmptyState";
-import Loading from "@/Components/Loading";
+import EmptyState from "@/components/EmptyState";
+import Loading from "@/components/Loading";
 
 const intialValues = {
     Menu: false,
@@ -83,7 +83,7 @@ export function Prescriptions() {
 
     const { users } = useContext(UserContext)!;
     const { patients } = useContext(PatientContext)!;
-    const { prescriptions, refreshPrescriptions, loading, error } = useContext(PrescriptionContext)!;
+    const { prescriptions, refreshPrescriptions, loading } = useContext(PrescriptionContext)!;
 
 
 

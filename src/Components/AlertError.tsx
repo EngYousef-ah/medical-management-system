@@ -4,7 +4,7 @@ import {
     Alert,
     AlertDescription,
     AlertTitle,
-} from "@/Components/ui/alert"
+} from "@/components/ui/alert"
 
 export function AlertError() {
     return (

@@ -1,20 +1,20 @@
 import { useState, useMemo, useContext, useEffect, useReducer } from "react";
 import axios from "axios";
-import SidebarFooter from "../Components/SidebarFooter";
-import SidebarHeader from "../Components/SidebarHeader";
-import SidebarItem from "../Components/SidebarItem";
-import Header from "../Components/Header";
-import Heading from "../Components/Heading";
-import Paragraph from "../Components/Paragraph";
-import AddBtn from "../Components/AddBtn";
-import { AppointmentItem, ScheduledAppointmentItem, CompletedAppointmentItem, CancelledAppointmentItem } from "../Components/AppointmentItem";
+import SidebarFooter from "../components/SidebarFooter";
+import SidebarHeader from "../components/SidebarHeader";
+import SidebarItem from "../components/SidebarItem";
+import Header from "../components/Header";
+;
+import Paragraph from "../components/Paragraph";
+import AddBtn from "../components/AddBtn";
+import { AppointmentItem, ScheduledAppointmentItem, CompletedAppointmentItem, CancelledAppointmentItem } from "../components/AppointmentItem";
 import { LayoutDashboard, User, CalendarDays, Paperclip, Pill, ChartColumn, CircleX, CircleCheckBig, LogOut, Search, Trash2Icon, Pencil } from "lucide-react"
 
 import { Link } from "react-router-dom";
-import SearchInput from "../Components/SearchInput";
-import { DialogAppointment } from "@/Components/DialogAppointment";
-import { Alert } from "@/Components/Alert";
-import PaginationPage from "@/Components/PaginationPage";
+import SearchInput from "../components/SearchInput";
+import { DialogAppointment } from "@/components/DialogAppointment";
+import { Alert } from "@/components/Alert";
+import PaginationPage from "@/components/PaginationPage";
 import SchedulePage from "./SchedulePage ";
 import '@schedule-x/theme-default/dist/index.css'
 import "../index.css"
@@ -25,7 +25,8 @@ import { UserContext } from "@/contexts/UserContext";
 import { PatientContext } from "@/contexts/PatientContext";
 import { AppointmentContext } from "@/contexts/AppointmentContext";
 import toast from "react-hot-toast"
-import Loading from "@/Components/Loading";
+import Loading from "@/components/Loading";
+import Heading from "../components/Heading";
 
 const intialValues = {
     Menu: false,

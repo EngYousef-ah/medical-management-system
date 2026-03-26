@@ -1,8 +1,8 @@
-import { Button } from "@/Components/ui/button"
-import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle, } from "@/Components/ui/dialog"
-import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue, } from "@/Components/ui/select"
-import { Field, FieldGroup } from "@/Components/ui/field"
-import { Input } from "@/Components/ui/input"
+import { Button } from "@/components/ui/button"
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle, } from "@/components/ui/dialog"
+import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue, } from "@/components/ui/select"
+import { Field, FieldGroup } from "@/components/ui/field"
+import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
 import { useState, useEffect, useContext } from "react"
@@ -203,7 +203,7 @@ export function DialogAppointment({ type, open, setOpen, appointmentId }: Props)
                         <Button disabled={!isFormValid() || loadingSubmit} type="submit" className="bg-[#3ea194] mt-5 text-gray-50 w-full rounded-lg hover:bg-[#1a7f72] duration-300 transition">
                             {loadingSubmit ? (
                                 <span className="flex items-center gap-2">
-                                    <Loading  /> Saving...
+                                    <Loading /> Saving...
                                 </span>
                             ) : (
                                 type === "edit" ? "Edit Medical Record" : "Add Medical Record"

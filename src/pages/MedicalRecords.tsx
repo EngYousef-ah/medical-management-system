@@ -1,19 +1,19 @@
-import SidebarFooter from "../Components/SidebarFooter";
-import SidebarHeader from "../Components/SidebarHeader";
-import SidebarItem from "../Components/SidebarItem";
-import Header from "../Components/Header";
-import Heading from "../Components/Heading";
-import Paragraph from "../Components/Paragraph";
+import SidebarFooter from "../components/SidebarFooter";
+import SidebarHeader from "../components/SidebarHeader";
+import SidebarItem from "../components/SidebarItem";
+import Header from "../components/Header";
+import Heading from "../components/Heading";
+import Paragraph from "../components/Paragraph";
 import { Link } from "react-router-dom";
 import { LayoutDashboard, User, CalendarDays, Paperclip, Pill, ChartColumn, LogOut, Trash2Icon, Eye, Pencil } from "lucide-react"
 
-import AddBtn from "@/Components/AddBtn";
-import Record from "@/Components/Record";
+import AddBtn from "@/components/AddBtn";
+import Record from "@/components/Record";
 
 import { useState, useContext, useMemo, useReducer, useEffect } from "react";
 import axios from "axios";
-import { DialogMedicalRecord } from "@/Components/DialogMedicalRecord";
-import { Alert } from "@/Components/Alert";
+import { DialogMedicalRecord } from "@/components/DialogMedicalRecord";
+import { Alert } from "@/components/Alert";
 
 import { UserContext } from "@/contexts/UserContext";
 import { PatientContext } from "@/contexts/PatientContext";
@@ -22,9 +22,9 @@ import { MedicalRecordContext } from "@/contexts/MedicalRecordContext";
 import type { TypeMedicalRecord } from "@/types/TypeMedicalRecord";
 import type { TypeUser } from "@/types/TypeUser";
 import type { TypePatient } from "@/types/TypePatient";
-import PaginationPage from "@/Components/PaginationPage";
+import PaginationPage from "@/components/PaginationPage";
 import toast from "react-hot-toast";
-import Loading from "@/Components/Loading";
+import Loading from "@/components/Loading";
 type State = {
     Menu: boolean;
     Dialog: boolean;
@@ -71,7 +71,7 @@ export function MedicalRecords() {
     // Context API
     const { users } = useContext(UserContext)!;
     const { patients } = useContext(PatientContext)!;
-    const { records, refreshRecords,loading } = useContext(MedicalRecordContext)!;
+    const { records, refreshRecords, loading } = useContext(MedicalRecordContext)!;
 
 
 

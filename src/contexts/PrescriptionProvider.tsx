@@ -10,7 +10,7 @@ type Props = {
 const API_URL = "http://localhost:3000/prescription";
 export function PrescriptionProvider({ children }: Props) {
 
-    const { data, loading, error } = useFetch(API_URL)
+    const { data, loading } = useFetch(API_URL)
 
     const [prescriptions, setPrescriptions] = useState<TypePrescription[]>([]);
 
@@ -29,7 +29,7 @@ export function PrescriptionProvider({ children }: Props) {
     };
 
     return (
-        <PrescriptionContext.Provider value={{ prescriptions, setPrescriptions, refreshPrescriptions, loading, error }}>
+        <PrescriptionContext.Provider value={{ prescriptions, setPrescriptions, refreshPrescriptions, loading }}>
             {children}
         </PrescriptionContext.Provider>
     );

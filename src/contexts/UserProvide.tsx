@@ -7,13 +7,12 @@ type Props = {
 
 export function UserProvider({ children }: Props) {
 
-  const { data, loading, error } = useFetch("http://localhost:3000/users");
+  const { data, loading } = useFetch("http://localhost:3000/users");
 
   return (
     <UserContext.Provider value={{
       users: data || [],
-      loading,
-      error
+      loading
     }}>
       {children}
     </UserContext.Provider>

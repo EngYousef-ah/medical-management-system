@@ -9,7 +9,7 @@ type Props = {
     children: ReactNode;
 }
 export function MedicalRecordProvider({ children }: Props) {
-    const { data, loading, error } = useFetch(API_URL);
+    const { data, loading } = useFetch(API_URL);
     const [records, setRecords] = useState<TypeMedicalRecord[]>([]);
 
     useEffect(() => {

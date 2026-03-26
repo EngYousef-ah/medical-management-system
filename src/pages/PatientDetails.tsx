@@ -1,19 +1,19 @@
 import { Link } from "react-router-dom";
-import Header from "../Components/Header";
-import SidebarFooter from "../Components/SidebarFooter";
-import SidebarItem from "../Components/SidebarItem";
+import Header from "../components/Header";
+import SidebarFooter from "../components/SidebarFooter";
+import SidebarItem from "../components/SidebarItem";
 import { ArrowLeft, Calendar, CalendarDays, ChartColumn, LayoutDashboard, LogOut, Mail, MapPin, Paperclip, Pencil, Phone, Pill, Syringe, Trash2Icon, User } from "lucide-react";
-import SidebarHeader from "../Components/SidebarHeader";
-import { AppointmentItem, CancelledAppointmentItem, CompletedAppointmentItem, ScheduledAppointmentItem } from "../Components/AppointmentItem";
+import SidebarHeader from "../components/SidebarHeader";
+import { AppointmentItem, CancelledAppointmentItem, CompletedAppointmentItem, ScheduledAppointmentItem } from "../components/AppointmentItem";
 import axios from "axios";
 import { useState, useMemo, useContext, useEffect, useReducer } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-import { Alert } from "@/Components/Alert";
-import { DialogAppointment } from "@/Components/DialogAppointment";
-import { CannotDeletePatientAlert } from "@/Components/CannotDeletePatientAlert";
-import { DialogPatient } from "@/Components/DialogPatient";
+import { Alert } from "@/components/Alert";
+import { DialogAppointment } from "@/components/DialogAppointment";
+import { CannotDeletePatientAlert } from "@/components/CannotDeletePatientAlert";
+import { DialogPatient } from "@/components/DialogPatient";
 
 import type { TypeUser } from "@/types/TypeUser";
 import type { TypeAppointment } from "@/types/TypeAppointment";
