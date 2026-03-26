@@ -4,7 +4,7 @@ export interface RegisterUser {
   password: string
   role: "doctor" | "patient"
 }
-const API_URL = "https://my-json-server.typicode.com/EngYousef-ah/medical-management-system";
+const API_URL = "https://69c59dee8a5b6e2dec2cb4d4.mockapi.io/";
 export const registerUser = async (user: RegisterUser) => {
   const response = await fetch(`${API_URL}/users`, {
     method: "POST",
