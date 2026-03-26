@@ -25,7 +25,7 @@ export default function App() {
   return (
     <main className="App bg-gray-100" >
       <Routes>
-        <Route path="/medical-management-system" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />

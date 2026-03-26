@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Heading from "./Heading";
+import patientImage1 from '../../assets/imgs/img1.jpg';
 export default function HeroHome() {
     return (
         <section className="pt-32 pb-24 bg-linear-to-br from-[#104c44] to-[#1a7f72] text-white">
@@ -32,7 +33,7 @@ export default function HeroHome() {
                 </div>
 
                 <img
-                    src="../../src/assets/imgs/img1.jpg"
+                    src={patientImage1}
                     className="w-105 lg:w-130 rounded-3xl shadow-2xl hover:scale-105 smooth"
                 />
 

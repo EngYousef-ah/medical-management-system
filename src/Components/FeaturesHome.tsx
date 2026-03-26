@@ -1,19 +1,22 @@
+import image2 from '../assets/imgs/img2.jpg';
+import image3 from '../assets/imgs/img3.jpg';
+import image4 from '../assets/imgs/img4.jpg';
 export default function FeaturesHome() {
     const features = [
         {
             title: "Patient Records",
             desc: "Secure digital storage of medical history and data.",
-            img: "../../src/assets/imgs/img2.jpg"
+            img: {image2}
         },
         {
             title: "Smart Scheduling",
             desc: "Automated appointment management system.",
-            img: "../../src/assets/imgs/img3.jpg"
+            img: {image3}
         },
         {
             title: "Analytics Dashboard",
             desc: "Real-time insights and medical statistics.",
-            img: "../../src/assets/imgs/img4.jpg"
+            img:{image4}
         }
     ];
     return (
