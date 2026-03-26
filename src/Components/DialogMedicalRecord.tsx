@@ -35,7 +35,8 @@ type typeFreePatient = {
   id: string
   name: string
 }
-const API_URL = "https://my-json-server.typicode.com/EngYousef-ah/medical-management-system";
+const API_URL = "https://medicalsystem-api.free.beeceptor.com/";
+
 export function DialogMedicalRecord({ open, setOpen, type, MedicalRecordId }: Props) {
   const user = (() => {
     try {

@@ -30,7 +30,8 @@ const defaultForm = {
     status: "active"
 };
 
-const API_URL = "https://my-json-server.typicode.com/EngYousef-ah/medical-management-system";
+const API_URL = "https://medicalsystem-api.free.beeceptor.com/";
+
 export function DialogPrescrption({ type, open, setOpen, prescriptionId }: Props) {
 
     const [loadingSubmit, setLoadingSubmit] = useState(false);

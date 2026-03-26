@@ -6,7 +6,8 @@ import useFetch from "@/hooks/useFetch";
 type Props = {
   children: React.ReactNode;
 };
-const API_URL = "https://my-json-server.typicode.com/EngYousef-ah/medical-management-system";
+
+const API_URL = "https://medicalsystem-api.free.beeceptor.com/";
 export function AppointmentProvider({ children }: Props) {
   const { data, loading, error } = useFetch(`${API_URL}/appointment`);
 

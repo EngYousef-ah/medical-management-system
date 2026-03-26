@@ -4,7 +4,8 @@ import axios from "axios";
 import { MedicalRecordContext } from "./MedicalRecordContext";
 import type { TypeMedicalRecord } from "@/types/TypeMedicalRecord";
 import useFetch from "@/hooks/useFetch";
-const API_URL = "https://my-json-server.typicode.com/EngYousef-ah/medical-management-system";
+const API_URL = "https://medicalsystem-api.free.beeceptor.com/";
+
 type Props = {
     children: ReactNode;
 }

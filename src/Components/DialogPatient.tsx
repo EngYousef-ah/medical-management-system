@@ -35,7 +35,8 @@ const defaultPatient = {
     address: "",
     status: ""
 };
-const API_URL = "https://my-json-server.typicode.com/EngYousef-ah/medical-management-system";
+const API_URL = "https://medicalsystem-api.free.beeceptor.com/";
+
 export function DialogPatient({ type, open, setOpen, patientId }: Props) {
     const { patients, refreshPatients } = useContext(PatientContext)!;
     const { users } = useContext(UserContext)!;

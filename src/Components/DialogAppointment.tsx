@@ -26,7 +26,8 @@ type Props = {
 }
 
 const types = ["checkup", "follow-up", "consultation", "procedure", "Emergency"]
-const API_URL = "https://my-json-server.typicode.com/EngYousef-ah/medical-management-system";
+const API_URL = "https://medicalsystem-api.free.beeceptor.com/";
+
 export function DialogAppointment({ type, open, setOpen, appointmentId }: Props) {
     const { patients } = useContext(PatientContext)!;
     const { appointments } = useContext(AppointmentContext)!;
