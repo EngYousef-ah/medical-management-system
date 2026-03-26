@@ -40,7 +40,6 @@ export function DoctorDashboard() {
     const { prescriptions } = useContext(PrescriptionContext)!;
     const { records } = useContext(MedicalRecordContext)!;
 
-    console.log(error);
 
 
 
