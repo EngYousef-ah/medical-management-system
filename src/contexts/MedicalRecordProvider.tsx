@@ -1,0 +1,37 @@
+import { useState, useEffect } from "react";
+import type { ReactNode } from "react";
+import axios from "axios";
+import { MedicalRecordContext } from "./MedicalRecordContext";
+import type { TypeMedicalRecord } from "@/types/TypeMedicalRecord";
+import useFetch from "@/hooks/useFetch";
+const API_URL = "http://localhost:3000/medicalRecords";
+type Props = {
+    children: ReactNode;
+}
+export function MedicalRecordProvider({ children }: Props) {
+    const { data, loading, error } = useFetch(API_URL);
+    const [records, setRecords] = useState<TypeMedicalRecord[]>([]);
+
+    useEffect(() => {
+        if (data) {
+            setRecords(data);
+        }
+    }, [data])
+
+    const refreshRecords = async () => {
+        try {
+            const response = await axios.get(API_URL);
+            setRecords(response.data);
+        }
+        catch (error) {
+            console.log("Error fetching Medical Records" + error);
+        }
+
+    }
+
+    return (
+        <MedicalRecordContext.Provider value={{ records, setRecords, refreshRecords, loading }}>
+            {children}
+        </MedicalRecordContext.Provider>
+    );
+}
