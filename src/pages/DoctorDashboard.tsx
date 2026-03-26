@@ -34,7 +34,7 @@ import Loading from "@/components/Loading";
 export function DoctorDashboard() {
     const [openMenu, setOpenMenu] = useState<boolean>(false);
 
-    const { users, loading, error } = useContext(UserContext)!;
+    const { users, loading } = useContext(UserContext)!;
     const { appointments } = useContext(AppointmentContext)!;
     const { patients } = useContext(PatientContext)!;
     const { prescriptions } = useContext(PrescriptionContext)!;
