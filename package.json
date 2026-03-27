@@ -2,7 +2,7 @@
   "name": "medical-management-system",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/EngYousef-ah/medical-management-system",
+  "homepage": "https://engyousef-ah.github.io/medical-management-system/",
   "type": "module",
   "scripts": {
     "dev": "vite",

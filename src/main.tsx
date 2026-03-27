@@ -1,5 +1,6 @@
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter } from "react-router-dom";
+// import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 import { UserProvider } from "./contexts/UserProvide";
 import { AppointmentProvider } from "./contexts/AppointmentProvider";
@@ -8,10 +9,11 @@ import { PrescriptionProvider } from './contexts/PrescriptionProvider.tsx';
 import { MedicalRecordProvider } from './contexts/MedicalRecordProvider.tsx';
 import './index.css'
 import App from './App.tsx'
+
 import { Toaster } from "react-hot-toast";
 createRoot(document.getElementById('root')!).render(
   <>
-    <BrowserRouter>
+    <HashRouter>
       <UserProvider>
         <AppointmentProvider>
           <PatientProvider>
@@ -23,7 +25,7 @@ createRoot(document.getElementById('root')!).render(
           </PatientProvider>
         </AppointmentProvider>
       </UserProvider>
-    </BrowserRouter>
+    </HashRouter>
 
     <Toaster
       position="top-right"
