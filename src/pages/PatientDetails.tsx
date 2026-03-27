@@ -271,7 +271,7 @@ export default function PatientDetails() {
                                                     return;
                                                 }
                                                 try {
-                                                    await axios.delete(`http://localhost:3000/patients/${id}`);
+                                                    await axios.delete(`https://69c59dee8a5b6e2dec2cb4d4.mockapi.io/patients/${id}`);
                                                     await refreshPatients();
                                                     navigate("../patient");
                                                     toast.success("The patient has been successfully deleted.");
@@ -333,7 +333,7 @@ export default function PatientDetails() {
                                             confirmText="Delete"
                                             variant="destructive"
                                             onConfirm={async () => {
-                                                await axios.delete(`http://localhost:3000/appointment/${item.id}`);
+                                                await axios.delete(`https://69c68e89f272266f3eacc5b5.mockapi.io/appointment/${item.id}`);
                                                 await refreshAppointments();
                                             }} />
 

@@ -30,7 +30,7 @@ const defaultForm = {
     status: "active"
 };
 
-const API_URL = "https://medicalsystem-api.free.beeceptor.com/";
+const API_URL = "https://69c68e89f272266f3eacc5b5.mockapi.io/";
 
 export function DialogPrescrption({ type, open, setOpen, prescriptionId }: Props) {
 

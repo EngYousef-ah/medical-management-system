@@ -323,15 +323,11 @@
       "status": ""
     }
   ],
-  "dashboardStats": [
-    {
-      "totalPatients": 156,
-      "todayAppointments": 8,
-      "activePrescriptions": 43,
-      "monthlyRevenue": 48750,
-      "id": "9748"
-    }
-  ],
+
+
+  
+
+  
   "appointmentTypeData": [
     {
       "name": "Checkup",

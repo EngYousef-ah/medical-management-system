@@ -115,7 +115,6 @@ export function DoctorDashboard() {
         <div className={`flex h-screen relative `}>
             {loading ? <Loading /> : ""}
 
-            {/* {error ? toast.error("The medical record has been successfully deleted.") : null} */}
             {openMenu && (
                 <div
                     onClick={() => setOpenMenu(false)}

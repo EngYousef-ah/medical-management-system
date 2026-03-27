@@ -397,7 +397,7 @@ export default function Appointments() {
                                     variant="destructive"
                                     onConfirm={async () => {
                                         try {
-                                            await axios.delete(`http://localhost:3000/appointment/${app.id}`);
+                                            await axios.delete(`https://69c68e89f272266f3eacc5b5.mockapi.io/appointment/${app.id}`);
                                             await refreshAppointments();
                                             toast.success("The appointment has been successfully deleted.");
                                         } catch {

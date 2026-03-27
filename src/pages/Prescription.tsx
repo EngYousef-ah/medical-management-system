@@ -305,7 +305,7 @@ export function Prescriptions() {
                                             confirmText="Delete"
                                             variant="destructive"
                                             onConfirm={async () => {
-                                                await axios.delete(`http://localhost:3000/prescription/${item.id}`);
+                                                await axios.delete(`https://69c68e89f272266f3eacc5b5.mockapi.io/prescription${item.id}`);
                                                 toast.success("The prescription has been successfully deleted.");
                                                 await refreshPrescriptions()
                                             }} />

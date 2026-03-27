@@ -7,7 +7,7 @@ type Props = {
     children: React.ReactNode;
 };
 
-const API_URL = "https://medicalsystem-api.free.beeceptor.com/";
+const API_URL = "https://69c59dee8a5b6e2dec2cb4d4.mockapi.io";
 export function PatientProvider({ children }: Props) {
     const { data, loading } = useFetch(`${API_URL}/patients`);
     const [patients, setPatients] = useState<TypePatient[]>([]);
