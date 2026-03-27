@@ -20,14 +20,14 @@ import type { TypeUser } from "@/types/TypeUser";
 import type { TypePatient } from "@/types/TypePatient";
 import type { TypeAppointment } from "@/types/TypeAppointment";
 import type { TypePrescription } from "@/types/TypePrescription";
-// import type { TypeMedicalRecord } from "@/types/TypeMedicalRecord";
+import type { TypeMedicalRecord } from "@/types/TypeMedicalRecord";
 import { CancelledAppointmentItem, CompletedAppointmentItem, ScheduledAppointmentItem } from "@/components/AppointmentItem";
 
 import { UserContext } from "../contexts/UserContext";
 import { AppointmentContext } from "../contexts/AppointmentContext";
 import { PatientContext } from "@/contexts/PatientContext";
 import { PrescriptionContext } from "@/contexts/PrescriptionContext";
-// import { MedicalRecordContext } from "@/contexts/MedicalRecordContext";
+import { MedicalRecordContext } from "@/contexts/MedicalRecordContext";
 // import toast from "react-hot-toast";
 import Loading from "@/components/Loading";
 
@@ -38,7 +38,7 @@ export function DoctorDashboard() {
     const { appointments } = useContext(AppointmentContext)!;
     const { patients } = useContext(PatientContext)!;
     const { prescriptions } = useContext(PrescriptionContext)!;
-    // const { records } = useContext(MedicalRecordContext)!;
+    const { records } = useContext(MedicalRecordContext)!;
 
 
 
@@ -74,6 +74,19 @@ export function DoctorDashboard() {
         );
     }, [appointments, patients, user.id])
 
+    // const allPatientForDoctor = useMemo(() => {
+    //     const doctorAppointments = appointments.filter((ap: TypeAppointment) =>
+    //         ap.doctorId === user.id
+    //     )
+
+    //     const uniquePatients = new Set<string>(
+    //         doctorAppointments.map((ap: TypeAppointment) => ap.patientId)
+    //     )
+    //     return patients.filter((patient) =>
+    //         uniquePatients.has(patient.id)
+    //     );
+    // }, [appointments, patients, user.id])
+
 
     const allAppointmentsForDoctor = useMemo(() => {
         return appointments.filter((item: TypeAppointment) => {
@@ -82,11 +95,11 @@ export function DoctorDashboard() {
     }, [appointments, user.id])
 
 
-    // const allMedicalRecordsForDoctor = useMemo(() => {
-    //     return records.filter((record: TypeMedicalRecord) =>
-    //         record.doctorId === user.id
-    //     )
-    // }, [records, user])
+    const allMedicalRecordsForDoctor = useMemo(() => {
+        return records.filter((record: TypeMedicalRecord) =>
+            record.doctorId === user.id
+        )
+    }, [records, user])
 
     const allPrescriptionForDoctor = useMemo(() => {
         return prescriptions.filter((item: TypePrescription) =>
@@ -180,7 +193,7 @@ export function DoctorDashboard() {
                     <div className="grid gap-4 grid-cols-1  sm:grid-cols-2 :grid-cols-2  lg:grid-cols-4 ">
                         <Card title="Total Patients" num={allPatientForDoctor.length} icon={<User color="#0b8f51" size={35} />} colorChange="text-[#0b8f51]" change="+12% this month" />
                         <Card title="Total Appointments" num={allAppointmentsForDoctor.length} icon={<CalendarDays color="#0b8f51" size={35} />} colorChange="text-[#0b8f51]" change="+3 this month" />
-                        {/* <Card title="Total Medical Records" num={allMedicalRecordsForDoctor.length} icon={<Paperclip color="#0b8f51" size={35} />} colorChange="text-[#0b8f51]" change="+12% this month" /> */}
+                        <Card title="Total Medical Records" num={allMedicalRecordsForDoctor.length} icon={<Paperclip color="#0b8f51" size={35} />} colorChange="text-[#0b8f51]" change="+12% this month" />
                         <Card title="Total Prescriptions" num={allPrescriptionForDoctor.length} icon={<Pill color="#0b8f51" size={35} />} colorChange="text-[#0b8f51]" change="+5% this month" />
                     </div>
 

@@ -252,7 +252,7 @@ export function MedicalRecords() {
                                                         confirmText="Delete"
                                                         variant="destructive"
                                                         onConfirm={async () => {
-                                                            await axios.delete(`http://localhost:3000/medicalRecords/${item.id}`);
+                                                            await axios.delete(`https://69c6a792f272266f3eacee2b.mockapi.io/medicalRecords/${item.id}`);
                                                             await refreshRecords();
                                                             toast.success("The medical record has been successfully deleted.");
 

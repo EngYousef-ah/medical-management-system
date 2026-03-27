@@ -299,35 +299,13 @@
       "treatment": "Antihistamines",
       "notes": "Patient advised to avoid pollen exposure",
       "status": "active"
-    },
-    {
-      "id": "3ded",
-      "doctorId": "70aaa8d7-9e20-42bf-820b-b1e97e5d1d09",
-      "patientId": null,
-      "visitDate": "2026-03-04",
-      "diagnosis": "12",
-      "symptoms": "asdasd",
-      "treatment": "asdsa",
-      "notes": "sadsd",
-      "status": ""
-    },
-    {
-      "id": "5684",
-      "doctorId": "40a7",
-      "patientId": "623c",
-      "visitDate": "2026-03-04",
-      "diagnosis": "12",
-      "symptoms": "سيبيسب",
-      "treatment": "يب",
-      "notes": "يسب",
-      "status": ""
     }
   ],
 
 
   
 
-  
+
   "appointmentTypeData": [
     {
       "name": "Checkup",

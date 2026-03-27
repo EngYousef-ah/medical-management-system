@@ -35,7 +35,7 @@ type typeFreePatient = {
   id: string
   name: string
 }
-const API_URL = "https://medicalsystem-api.free.beeceptor.com/";
+const API_URL = "https://69c6a792f272266f3eacee2b.mockapi.io";
 
 export function DialogMedicalRecord({ open, setOpen, type, MedicalRecordId }: Props) {
   const user = (() => {
