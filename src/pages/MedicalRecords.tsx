@@ -31,8 +31,8 @@ type State = {
     TypeDialog: string;
     IdDialog: string;
 };
-type Action = { type: "TOGGLE_MENU" } |
-{ type: "TOGGLE_DIALOG" } |
+type Action = { type: "Menu" } |
+{ type: "Dialog" } |
 { type: "TypeDialog", payload: string } |
 { type: "IdDialog", payload: string };
 
@@ -41,10 +41,10 @@ type Action = { type: "TOGGLE_MENU" } |
 function reducer(state: State, action: Action) {
 
     const typeAction = action.type;
-    if (typeAction === "TOGGLE_MENU") {
+    if (typeAction === "Menu") {
         return { ...state, Menu: !state.Menu };
     }
-    else if (typeAction === "TOGGLE_DIALOG") {
+    else if (typeAction === "Dialog") {
         return { ...state, Dialog: !state.Dialog };
     }
     else if (typeAction === "TypeDialog") {
@@ -77,15 +77,15 @@ export function MedicalRecords() {
 
     const user = (() => {
         try {
-            const dataFromLocal = localStorage.getItem("user");
-            if (!dataFromLocal) return { id: "", name: "", role: "" };
-
-            const dataParsed = JSON.parse(dataFromLocal);
-
+            const token = localStorage.getItem("token");
+            if (!token) {
+                return { id: "", name: "", role: "" };
+            }
+            const userData = JSON.parse(atob(token));
             return {
-                id: dataParsed?.id ?? "",
-                name: dataParsed?.name ?? "",
-                role: dataParsed?.role ?? ""
+                id: userData?.id ?? "",
+                name: userData?.name ?? "",
+                role: userData?.role ?? ""
             };
         } catch {
             return { id: "", name: "", role: "" };
@@ -132,14 +132,14 @@ export function MedicalRecords() {
             )}
             <DialogMedicalRecord
                 open={state.Dialog}
-                setOpen={() => dispatch({ type: "TOGGLE_DIALOG" })}
+                setOpen={() => dispatch({ type: "Dialog" })}
                 type={state.TypeDialog}
                 MedicalRecordId={state.IdDialog}
             />
 
             {state.Menu && (
                 <div
-                    onClick={() => dispatch({ type: "TOGGLE_MENU" })}
+                    onClick={() => dispatch({ type: "Menu" })}
                     className="fixed inset-0 bg-black/30 z-20 md:hidden"
                 />
             )}
@@ -154,7 +154,7 @@ export function MedicalRecords() {
 
 
                 <div className="mb-8">
-                    <SidebarHeader title="MedPractice" subTitle="Management System" cancle={() => dispatch({ type: "TOGGLE_MENU" })} />
+                    <SidebarHeader title="MedPractice" subTitle="Management System" cancle={() => dispatch({ type: "Menu" })} />
 
                     <ul className="space-y-2 mt-8">
                         <Link to="../">
@@ -196,7 +196,7 @@ export function MedicalRecords() {
 
                 <Header name={user.name} click={() => {
 
-                    dispatch({ type: "TOGGLE_MENU" })
+                    dispatch({ type: "Menu" })
                 }
                 } />
 
@@ -208,7 +208,7 @@ export function MedicalRecords() {
                         </div>
                         {user.role === "doctor" &&
                             <AddBtn title="Add Medical Record" onClick={() => {
-                                dispatch({ type: "TOGGLE_DIALOG" })
+                                dispatch({ type: "Dialog" })
                                 dispatch({ type: "TypeDialog", payload: "add" })
                             }
                             } />
@@ -269,7 +269,7 @@ export function MedicalRecords() {
                                                         onConfirm={async () => {
                                                             dispatch({ type: "TypeDialog", payload: "edit" })
                                                             dispatch({ type: "IdDialog", payload: item.id })
-                                                            dispatch({ type: "TOGGLE_DIALOG" })
+                                                            dispatch({ type: "Dialog" })
 
                                                         }}
                                                     />

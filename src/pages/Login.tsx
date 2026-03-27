@@ -22,8 +22,8 @@ export default function LoginPage() {
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    const storedUser = localStorage.getItem("user");
-    if (storedUser && token) {
+    // const storedUser = localStorage.getItem("user");
+    if (token) {
       const parsedData = JSON.parse(atob(token));
       // const parsedUser = JSON.parse(storedUser);
       console.log(`if i have token in local storage:  ${token}`);
@@ -48,8 +48,8 @@ export default function LoginPage() {
       const token = btoa(JSON.stringify(user));
 
       localStorage.setItem("token", token);
-      localStorage.setItem("user", JSON.stringify(user));
-      console.log(`token Login page:  ${token}`);
+      // localStorage.setItem("user", JSON.stringify(user));
+      // console.log(`token Login page:  ${token}`);
 
       if (user.role === "doctor") {
         navigate("/doctor-dashboard");

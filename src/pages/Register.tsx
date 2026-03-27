@@ -25,8 +25,7 @@ export default function RegisterPage() {
 
     const token=btoa(JSON.stringify(userData));
     localStorage.setItem("token",token);
-    localStorage.setItem("user", JSON.stringify(userData));
-    console.log(`token Register page:  ${token}`);
+    // console.log(`token Register page:  ${token}`);
     
     if (data.role === "doctor") {
       navigate("/doctor-dashboard");

@@ -90,21 +90,20 @@ export function Prescriptions() {
 
     const user = (() => {
         try {
-            const dataFromLocal = localStorage.getItem("user");
-            if (!dataFromLocal) return { id: "", name: "", role: "" };
-
-            const dataParsed = JSON.parse(dataFromLocal);
-
+            const token = localStorage.getItem("token");
+            if (!token) {
+                return { id: "", name: "", role: "" };
+            }
+            const userData = JSON.parse(atob(token));
             return {
-                id: dataParsed?.id ?? "",
-                name: dataParsed?.name ?? "",
-                role: dataParsed?.role ?? ""
+                id: userData?.id ?? "",
+                name: userData?.name ?? "",
+                role: userData?.role ?? ""
             };
         } catch {
             return { id: "", name: "", role: "" };
         }
     })();
-
     const allPrescription = useMemo(() => {
         if (patients.length === 0) return [];
 

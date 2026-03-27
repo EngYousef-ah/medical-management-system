@@ -13,17 +13,24 @@ import ChartTinyBar from "../components/ChartTinyBar";
 import { useState } from "react";
 export function Analytics() {
 
-    const username = (() => {
-        try {
-            const dataFromLocal = localStorage.getItem("user");
-            if (!dataFromLocal) return "";
 
-            const dataParsed = JSON.parse(dataFromLocal);
-            return dataParsed?.name ?? "";
+    const user = (() => {
+        try {
+            const token = localStorage.getItem("token");
+            if (!token) {
+                return { id: "", name: "", role: "" };
+            }
+            const userData = JSON.parse(atob(token));
+            return {
+                id: userData?.id ?? "",
+                name: userData?.name ?? "",
+                role: userData?.role ?? ""
+            };
         } catch {
-            return "";
+            return { id: "", name: "", role: "" };
         }
     })();
+
     const [openMenu, setOpenMenu] = useState<boolean>(false);
 
 
@@ -71,7 +78,7 @@ export function Analytics() {
                 </div>
 
                 <div className="flex justify-between items-center">
-                    <SidebarFooter role="Dr. " username={`${username}`} job="Doctor" />
+                    <SidebarFooter role="Dr. " username={`${user.name}`} job="Doctor" />
 
                     <Link to="/">
                         <LogOut color="#104c44" size={26} strokeWidth={2.75} onClick={() => localStorage.clear()} />
@@ -82,7 +89,7 @@ export function Analytics() {
 
             <div className="flex-1 flex flex-col pb-10">
 
-                <Header name={username} click={() => setOpenMenu(true)} />
+                <Header name={user.name} click={() => setOpenMenu(true)} />
 
                 <main className="flex-1  p-4 md:p-6 overflow-y-auto">
 

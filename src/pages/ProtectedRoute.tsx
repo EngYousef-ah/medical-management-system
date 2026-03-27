@@ -4,13 +4,14 @@ type Props = {
   allowedRole: string;
 }
 export default function ProtectedRoute({ allowedRole }: Props) {
-  const user = localStorage.getItem("user");
 
-  if (!user) {
+  const token = localStorage.getItem("token");
+
+  if (!token) {
     return <Navigate to="/login" replace />;
   }
-  const parsedUser = JSON.parse(user);
-  const role = parsedUser?.role;
+  const userData = JSON.parse(atob(token));
+  const role = userData?.role;
 
   if (role && role !== allowedRole) {
     return <Navigate to="/login" replace />;
