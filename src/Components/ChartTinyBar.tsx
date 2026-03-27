@@ -1,8 +1,4 @@
 import {BarChart,Bar,XAxis,YAxis,CartesianGrid,Tooltip,ResponsiveContainer,} from "recharts";
-
-// import { useState, useEffect } from "react";
-// import axios from "axios";
-
 interface WeeklyData {
   id: string;
   day: string;
@@ -44,12 +40,6 @@ const weeklyAppointmentData: WeeklyData[] = [
 
 
 export default function ChartTinyBar({ color = "" }) {
-  // const [weeklyAppointment, setWeeklyAppointment] = useState([]);
-  // useEffect(() => {
-  //   axios.get("http://localhost:3000/weeklyAppointmentData")
-  //     .then((response) => setWeeklyAppointment(response.data))
-  // }, [])
-
   return (
     <div className="w-full h-100 bg-gray-100 rounded-3xl p-8">
       <ResponsiveContainer width="100%" height="100%">

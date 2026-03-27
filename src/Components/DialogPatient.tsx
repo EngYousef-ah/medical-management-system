@@ -145,7 +145,7 @@ export function DialogPatient({ type, open, setOpen, patientId }: Props) {
                                 }}
 
                             >
-                                <SelectTrigger className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#23a997]">
+                                <SelectTrigger className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-teal-500">
                                     <SelectValue placeholder="Select Patient Name" />
                                 </SelectTrigger>
 
@@ -163,17 +163,17 @@ export function DialogPatient({ type, open, setOpen, patientId }: Props) {
 
                         <Field className="col-span-2 sm:col-span-1">
                             <Label>Email</Label>
-                            <Input name="email" type="email" placeholder="Your Email" value={form.email} readOnly className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#23a997]" />
+                            <Input name="email" type="email" placeholder="Your Email" value={form.email} readOnly className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-teal-500" />
                         </Field>
 
                         <Field className="col-span-2 sm:col-span-1">
                             <Label>Phone</Label>
-                            <Input name="phone" placeholder="Your Number Phone" value={form.phone} onChange={handleChange} required className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#23a997]" />
+                            <Input name="phone" placeholder="Your Number Phone" value={form.phone} onChange={handleChange} required className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-teal-500" />
                         </Field>
 
                         <Field className="col-span-2 sm:col-span-1">
                             <Label>Date Of Birth</Label>
-                            <Input name="dateOfBirth" type="date" value={form.dateOfBirth} onChange={handleChange} required className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#23a997]" />
+                            <Input name="dateOfBirth" type="date" value={form.dateOfBirth} onChange={handleChange} required className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-teal-500" />
                         </Field>
 
                         <Field className="col-span-2 sm:col-span-1">
@@ -184,7 +184,7 @@ export function DialogPatient({ type, open, setOpen, patientId }: Props) {
                                     setForm({ ...form, gender: value })
                                 }
                             >
-                                <SelectTrigger className="pl-10 mb-2 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#23a997]">
+                                <SelectTrigger className="pl-10 mb-2 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-teal-500">
                                     <SelectValue placeholder="Select Gender" />
                                 </SelectTrigger>
                                 <SelectContent side="bottom" position="popper">
@@ -198,12 +198,12 @@ export function DialogPatient({ type, open, setOpen, patientId }: Props) {
 
                         <Field className="col-span-2 sm:col-span-1">
                             <Label>Blood Type</Label>
-                            <Input name="bloodType" placeholder="Your Blood Type" value={form.bloodType} onChange={handleChange} required className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#23a997]" />
+                            <Input name="bloodType" placeholder="Your Blood Type" value={form.bloodType} onChange={handleChange} required className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-teal-500" />
                         </Field>
 
                         <Field className="col-span-2">
                             <Label>Address</Label>
-                            <Input name="address" placeholder="Your Address" value={form.address} onChange={handleChange} required className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#23a997]" />
+                            <Input name="address" placeholder="Your Address" value={form.address} onChange={handleChange} required className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-teal-500" />
                         </Field>
                         <Field className="col-span-2">
                             <Label>Status</Label>
@@ -216,16 +216,16 @@ export function DialogPatient({ type, open, setOpen, patientId }: Props) {
                                 className="flex gap-6 mt-2 not-"
                             >
                                 <div className="flex items-center space-x-2 ">
-                                    <RadioGroupItem value="active" id="active" className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-1 rounded shadow-lg border-none outline-none focus:ring-2 focus:ring-[#23a997]" />
+                                    <RadioGroupItem value="active" id="active" className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-1 rounded shadow-lg border-none outline-none focus:ring-2 focus:ring-teal-500" />
                                     <Label htmlFor="active" >Active</Label>
                                 </div>
 
                                 <div className="flex items-center space-x-2">
-                                    <RadioGroupItem value="inactive" id="inactive" className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-1 rounded shadow-lg border-none outline-none focus:ring-2 focus:ring-[#23a997]" />
+                                    <RadioGroupItem value="inactive" id="inactive" className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-1 rounded shadow-lg border-none outline-none focus:ring-2 focus:ring-teal-500" />
                                     <Label htmlFor="inactive">Inactive</Label>
                                 </div>
                                 <div className="flex items-center space-x-2">
-                                    <RadioGroupItem value="critical" id="critical" className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-1 rounded shadow-lg border-none outline-none focus:ring-2 focus:ring-[#23a997]" />
+                                    <RadioGroupItem value="critical" id="critical" className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-1 rounded shadow-lg border-none outline-none focus:ring-2 focus:ring-teal-500" />
                                     <Label htmlFor="critical">Critical</Label>
                                 </div>
                             </RadioGroup>

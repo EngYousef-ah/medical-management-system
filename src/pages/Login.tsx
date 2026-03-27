@@ -7,7 +7,6 @@ import type { LoginFormValues } from "../validation/loginValidation";
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate, Link } from "react-router-dom";
-import { Heart } from "lucide-react";
 
 
 
@@ -83,10 +82,6 @@ export default function LoginPage() {
       </div>
 
       <div className="flex items-center justify-center p-8">
-        <div className="flex gap-x-4 items-center md:hidden">
-          <Heart color="rgb(35, 169, 151)" size={26} />
-          <h1 className="text-2xl font-bold text-black">MedPractice</h1>
-        </div>
         <form className="w-full max-w-md space-y-8" onSubmit={handleSubmit(onSubmit)}>
           <div className="space-y-2">
             <h3 className="text-2xl font-bold">Welcome back</h3>

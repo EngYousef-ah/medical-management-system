@@ -8,7 +8,6 @@ import { Label } from "@/components/ui/label"
 import { useState, useEffect, useContext } from "react"
 import axios from "axios"
 
-// Importing Library Day.js
 import dayjs from "dayjs";
 import customParseFormat from "dayjs/plugin/customParseFormat";
 dayjs.extend(customParseFormat);
@@ -32,8 +31,6 @@ export function DialogAppointment({ type, open, setOpen, appointmentId }: Props)
     const { patients } = useContext(PatientContext)!;
     const { appointments } = useContext(AppointmentContext)!;
     const [loadingSubmit, setLoadingSubmit] = useState(false);
-
-
 
     const user = (() => {
         try {
@@ -146,7 +143,7 @@ export function DialogAppointment({ type, open, setOpen, appointmentId }: Props)
                                 onValueChange={(value) =>
                                     setForm({ ...form, patientId: value })
                                 }>
-                                <SelectTrigger className="pl-10 mb-2 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#23a997]">
+                                <SelectTrigger className="pl-10 mb-2 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-teal-500">
                                     <SelectValue placeholder="Select Patient" />
                                 </SelectTrigger>
                                 <SelectContent side="bottom" position="popper">
@@ -163,17 +160,17 @@ export function DialogAppointment({ type, open, setOpen, appointmentId }: Props)
                         </Field>
                         <Field className="col-span-2 sm:col-span-1">
                             <Label>Date</Label>
-                            <Input name="date" value={form.date} onChange={handleChange} type="date" required className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#23a997]" />
+                            <Input name="date" value={form.date} onChange={handleChange} type="date" required className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-teal-500" />
                         </Field>
 
                         <Field className="col-span-2 sm:col-span-1">
                             <Label>Time</Label>
-                            <Input name="time" value={form.time} onChange={handleChange} type="time" required className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#23a997]" />
+                            <Input name="time" value={form.time} onChange={handleChange} type="time" required className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-teal-500" />
                         </Field>
 
                         <Field className="col-span-2 sm:col-span-1">
                             <Label>Duration (min)</Label>
-                            <Input name="duration" value={form.duration} onChange={handleChange} type="number" min={0} max={100} required className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#23a997]" />
+                            <Input name="duration" value={form.duration} onChange={handleChange} type="number" min={0} max={100} required className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-teal-500" />
                         </Field>
 
                         <Field className="col-span-2 sm:col-span-1">
@@ -182,7 +179,7 @@ export function DialogAppointment({ type, open, setOpen, appointmentId }: Props)
                                 onValueChange={(value) =>
                                     setForm({ ...form, type: value })
                                 }>
-                                <SelectTrigger className="pl-10 mb-2 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#23a997]">
+                                <SelectTrigger className="pl-10 mb-2 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-teal-500">
                                     <SelectValue placeholder="Select Patient" />
                                 </SelectTrigger>
                                 <SelectContent side="bottom" position="popper">

@@ -181,9 +181,9 @@ export function DialogMedicalRecord({ open, setOpen, type, MedicalRecordId }: Pr
             </DialogTitle>
           </DialogHeader>
 
-          <FieldGroup className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <FieldGroup className="grid grid-cols-1  gap-6">
 
-            <Field className="col-span-2">
+            <Field className="col-span-1">
               <Label>Patient</Label>
               <Select
                 required
@@ -193,7 +193,7 @@ export function DialogMedicalRecord({ open, setOpen, type, MedicalRecordId }: Pr
                   setForm((prev) => ({ ...prev, patientId: value }))
                 }
               >
-                <SelectTrigger className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#23a997]">
+                <SelectTrigger className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-teal-500">
                   <SelectValue placeholder="Select Patient" />
                 </SelectTrigger>
 
@@ -209,54 +209,54 @@ export function DialogMedicalRecord({ open, setOpen, type, MedicalRecordId }: Pr
               </Select>
             </Field>
 
-            <Field>
+            <Field className="col-span-1">
               <Label>Visit Date</Label>
               <Input
                 type="date"
                 name="visitDate"
                 value={form.visitDate}
                 onChange={handleChange}
-                className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#23a997]"
+                className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-teal-500"
               />
             </Field>
 
-            <Field>
+            <Field className="col-span-1">
               <Label>Diagnosis</Label>
               <Input
                 name="diagnosis"
                 value={form.diagnosis}
                 onChange={handleChange}
-                className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#23a997]"
+                className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-teal-500"
               />
             </Field>
 
-            <Field>
+            <Field className="col-span-1">
               <Label>Symptoms</Label>
               <Input
                 name="symptoms"
                 value={form.symptoms}
                 onChange={handleChange}
-                className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#23a997]"
+                className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-teal-500"
               />
             </Field>
 
-            <Field>
+            <Field className="col-span-1">
               <Label>Treatment</Label>
               <Input
                 name="treatment"
                 value={form.treatment}
                 onChange={handleChange}
-                className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#23a997]"
+                className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-teal-500"
               />
             </Field>
 
-            <Field className="col-span-2">
+            <Field className="col-span-1">
               <Label>Notes</Label>
               <Input
                 name="notes"
                 value={form.notes}
                 onChange={handleChange}
-                className="bg-gray-100 ring-2 ring-gray-300 px-3 py-2 rounded-lg focus:ring-[#23a997]"
+                className="bg-gray-100 ring-2 ring-gray-300 px-3 py-2 rounded-lg focus:ring-teal-500"
               />
             </Field>
 

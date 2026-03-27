@@ -27,7 +27,7 @@ export default function SchedulePage() {
 
   const { appointments } = useContext(AppointmentContext)!;
   const { patients } = useContext(PatientContext)!
-  const [selectedDate, setSelectedDate] = useState("2026-03-04");
+  const [selectedDate, setSelectedDate] = useState(dayjs().format("YYYY-MM-DD"));
 
   const user = (() => {
     try {

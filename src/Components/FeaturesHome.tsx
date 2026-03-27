@@ -31,15 +31,15 @@ export default function FeaturesHome() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
 
-                {features.map((f, i) => (
-                    <div key={i} className="bg-white rounded-3xl shadow-lg p-8 hover:-translate-y-2 smooth">
-                        <img src={f.img} className="rounded-2xl mb-6 h-48 w-full object-cover" />
+                {features.map((element, index) => (
+                    <div key={index} className="bg-white rounded-3xl shadow-lg p-8 hover:-translate-y-2 smooth">
+                        <img src={element.img} className="rounded-2xl mb-6 h-48 w-full object-cover" />
 
                         <h3 className="text-xl font-bold text-[#104c44] mb-3">
-                            {f.title}
+                            {element.title}
                         </h3>
 
-                        <p className="text-gray-500">{f.desc}</p>
+                        <p className="text-gray-500">{element.desc}</p>
                     </div>
                 ))}
 

@@ -1,13 +1,4 @@
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, } from "recharts";
-// import { useState, useEffect } from "react";
-// import axios from "axios";
-
-// type typeAppointment = {
-//     id: string;
-//     name: string;
-//     value: number;
-//     color: string;
-// };
 
 interface AppointmentType {
     id: string;
@@ -50,14 +41,8 @@ const appointmentData: AppointmentType[] = [
 
 
 export default function ChartDonut() {
-    // const [, setData] = useState<typeAppointment[]>([]);
-    // useEffect(() => {
-    //     axios.get("http://localhost:3000/appointmentTypeData")
-    //         .then((response) => setData(response.data));
-    // }, [])
     return (
         <div className="w-full max-w-xl bg-[#f5f5f5] p-5 rounded-xl">
-
             <div className="flex flex-col items-center">
                 <div className="w-62.5 h-62.5">
                     <ResponsiveContainer>

@@ -144,7 +144,7 @@ export function DialogPrescrption({ type, open, setOpen, prescriptionId }: Props
                                 onValueChange={(value) =>
                                     setForm({ ...form, patientId: value })
                                 }>
-                                <SelectTrigger className="pl-10 mb-2 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#23a997]">
+                                <SelectTrigger className="pl-10 mb-2 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-teal-500">
                                     <SelectValue placeholder="Select Patient" />
                                 </SelectTrigger>
                                 <SelectContent side="bottom" position="popper">
@@ -162,25 +162,25 @@ export function DialogPrescrption({ type, open, setOpen, prescriptionId }: Props
 
                         <Field className="col-span-1" >
                             <Label>Medication</Label>
-                            <Input name="medication" value={form.medication} onChange={handleChange} required className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#23a997]" />
+                            <Input name="medication" value={form.medication} onChange={handleChange} required className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-teal-500" />
                         </Field>
 
 
                         <Field>
                             <Label>Dosage</Label>
-                            <Input name="dosage" value={form.dosage} onChange={handleChange} type="text" required className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#23a997]" />
+                            <Input name="dosage" value={form.dosage} onChange={handleChange} type="text" required className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-teal-500" />
                         </Field>
                         <Field>
                             <Label>Frequency</Label>
-                            <Input name="frequency" value={form.frequency} onChange={handleChange} type="text" required className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#23a997]" />
+                            <Input name="frequency" value={form.frequency} onChange={handleChange} type="text" required className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-teal-500" />
                         </Field>
                         <Field>
                             <Label>Start date</Label>
-                            <Input name="startDate" value={form.startDate} onChange={handleChange} type="date" required className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#23a997]" />
+                            <Input name="startDate" value={form.startDate} onChange={handleChange} type="date" required className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-teal-500" />
                         </Field>
                         <Field>
                             <Label>End date</Label>
-                            <Input name="endDate" value={form.endDate} onChange={handleChange} type="date" required className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#23a997]" />
+                            <Input name="endDate" value={form.endDate} onChange={handleChange} type="date" required className="pl-10 bg-gray-100 ring-2 ring-gray-300 p-3 rounded-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-teal-500" />
                         </Field>
 
 

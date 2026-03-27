@@ -4,7 +4,7 @@ import axios from "axios";
 import { MedicalRecordContext } from "./MedicalRecordContext";
 import type { TypeMedicalRecord } from "@/types/TypeMedicalRecord";
 import useFetch from "@/hooks/useFetch";
-const API_URL = "https://69c6a792f272266f3eacee2b.mockapi.io/medicalRecords";
+const API_URL = "https://69c6a792f272266f3eacee2b.mockapi.io";
 
 type Props = {
     children: ReactNode;

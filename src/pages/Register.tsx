@@ -19,10 +19,7 @@ export default function RegisterPage() {
 
   const onSubmit = async (data: RegisterFormValues) => {
 
-    const userData = {
-      ...data,
-      id: crypto.randomUUID()
-    };
+    const userData = {...data,id: crypto.randomUUID()};
 
     await registerUser(userData);
 

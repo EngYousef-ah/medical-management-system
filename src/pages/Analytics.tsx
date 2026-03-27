@@ -42,7 +42,7 @@ export function Analytics() {
                         transform ${openMenu ? "translate-x-0" : "-translate-x-full"}
                           md:translate-x-0
                         transition-transform duration-300 ease-in-out
-                        bg-gradient-to-br from-[#104c44] to-[rgb(26,127,114)]`}>
+                        bg-linear-to-br from-[#104c44] to-[rgb(26,127,114)]`}>
 
 
                 <div className="mb-8">
@@ -82,8 +82,6 @@ export function Analytics() {
 
             <div className="flex-1 flex flex-col pb-10">
 
-
-
                 <Header name={username} click={() => setOpenMenu(true)} />
 
                 <main className="flex-1  p-4 md:p-6 overflow-y-auto">
@@ -93,7 +91,7 @@ export function Analytics() {
 
 
                     {/* CHARTS */}
-                    <div className="grid gap-x-8 grid-cols-1  mt-8 gap-y-6 lg:grid-cols-3 mt-8">
+                    <div className="grid gap-x-8 grid-cols-1 mt-8 gap-y-6 lg:grid-cols-3 ">
                         <div className=" bg-white rounded-2xl shadow-lg p-8 col-span-1  lg:col-span-2">
                             <h2 className="text-2xl font-bold mb-6">Patient Overview</h2>
                             <ChartLine />
@@ -108,11 +106,6 @@ export function Analytics() {
                         <ChartTinyBar color="#1fa2ff" />
                     </div>
                     {/* =====CHARTS===== */}
-
-
-
-
-
 
 
                 </main>

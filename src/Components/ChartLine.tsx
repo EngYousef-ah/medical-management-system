@@ -1,7 +1,5 @@
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-// import { RechartsDevtools } from '@recharts/devtools';
-// import { useState, useEffect } from 'react';
-// import axios from 'axios';
+
 interface MonthlyData {
   id: string;
   month: string;
@@ -48,23 +46,7 @@ const monthlyPatientData: MonthlyData[] = [
   }
 ];
 
-// type typeMonthlyPatientData = {
-//   id: string;
-//   month: string;
-//   patients: string;
-//   appointments: string;
-// }
 export default function ChartLine() {
-  // const [data, setData] = useState<typeMonthlyPatientData[]>([]);
-
-  // useEffect(() => {
-  //   axios.get("http://localhost:3000/monthlyPatientData")
-  //     .then((response) => setData(response.data))
-  //     .catch(() => {
-  //       console.log("There is error in fetching monthly patients data from Mock Api");
-
-  //     })
-  // }, [])
   return (
     <div style={{ width: "100%", height: 400 }}>
       <ResponsiveContainer width="100%" height="100%">
