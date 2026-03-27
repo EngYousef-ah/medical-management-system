@@ -209,7 +209,7 @@ export function DialogMedicalRecord({ open, setOpen, type, MedicalRecordId }: Pr
               </Select>
             </Field>
 
-            <Field className="col-span-1">
+            <Field className="col-span-1 sm:col-span-2">
               <Label>Visit Date</Label>
               <Input
                 type="date"
@@ -220,7 +220,7 @@ export function DialogMedicalRecord({ open, setOpen, type, MedicalRecordId }: Pr
               />
             </Field>
 
-            <Field className="col-span-1">
+            <Field className="col-span-1 sm:col-span-2">
               <Label>Diagnosis</Label>
               <Input
                 name="diagnosis"
@@ -230,7 +230,7 @@ export function DialogMedicalRecord({ open, setOpen, type, MedicalRecordId }: Pr
               />
             </Field>
 
-            <Field className="col-span-1">
+            <Field className="col-span-1 sm:col-span-2">
               <Label>Symptoms</Label>
               <Input
                 name="symptoms"
@@ -240,7 +240,7 @@ export function DialogMedicalRecord({ open, setOpen, type, MedicalRecordId }: Pr
               />
             </Field>
 
-            <Field className="col-span-1">
+            <Field className="col-span-1 sm:col-span-2">
               <Label>Treatment</Label>
               <Input
                 name="treatment"
@@ -250,7 +250,7 @@ export function DialogMedicalRecord({ open, setOpen, type, MedicalRecordId }: Pr
               />
             </Field>
 
-            <Field className="col-span-1">
+            <Field className="col-span-1 ">
               <Label>Notes</Label>
               <Input
                 name="notes"

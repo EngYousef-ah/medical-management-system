@@ -23,8 +23,11 @@ export default function RegisterPage() {
 
     await registerUser(userData);
 
+    const token=btoa(JSON.stringify(userData));
+    localStorage.setItem("token",token);
     localStorage.setItem("user", JSON.stringify(userData));
-
+    console.log(`token Register page:  ${token}`);
+    
     if (data.role === "doctor") {
       navigate("/doctor-dashboard");
     } else {
@@ -37,7 +40,6 @@ export default function RegisterPage() {
 
   return (
     <div className="min-h-screen grid grid-cols-1 md:grid-cols-2">
-
       <div className="hidden md:flex flex-col items-center justify-center bg-hero gap-y-6">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -49,6 +51,7 @@ export default function RegisterPage() {
         >
           <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
         </svg>
+
 
         <h1 className="text-4xl font-bold text-white">MedPractice</h1>
 

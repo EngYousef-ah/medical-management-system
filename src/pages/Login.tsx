@@ -21,13 +21,16 @@ export default function LoginPage() {
   });
 
   useEffect(() => {
+    const token = localStorage.getItem("token");
     const storedUser = localStorage.getItem("user");
-    if (storedUser) {
-      const parsedUser = JSON.parse(storedUser);
+    if (storedUser && token) {
+      const parsedData = JSON.parse(atob(token));
+      // const parsedUser = JSON.parse(storedUser);
+      console.log(`if i have token in local storage:  ${token}`);
 
       reset({
-        email: parsedUser.email || "",
-        password: parsedUser.password || "",
+        email: parsedData.email || "",
+        password: parsedData.password || "",
       });
     }
   }, [reset]);
@@ -42,7 +45,11 @@ export default function LoginPage() {
       if (!user) {
         throw new Error("Invalid email or password");
       }
+      const token = btoa(JSON.stringify(user));
+
+      localStorage.setItem("token", token);
       localStorage.setItem("user", JSON.stringify(user));
+      console.log(`token Login page:  ${token}`);
 
       if (user.role === "doctor") {
         navigate("/doctor-dashboard");
